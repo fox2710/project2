@@ -1,0 +1,218 @@
+body
+{
+  font-family: sans-serif;
+  margin: 0;
+}
+
+header.section {
+    height: 97vh;
+    padding: 0 30px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.slider {
+    position: relative;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0) ), url(../img/slide2.jpg);
+    background-size: cover;
+}
+.logo {
+    justify-content: flex-start;
+    position: relative;
+    width: 20%;
+}
+.logo img {
+    width: 85px;
+}
+.menu {
+    justify-content: flex-end;
+    display: inline-flex;
+    margin-top: 27px;
+}
+
+.menu ul li {
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.menu ul li a {
+    text-decoration: none;
+    padding: 10px 0;
+    color: #000;
+}
+
+.btn-menu {
+    height: 30px;
+    background: #fff;
+    width: 30px;
+    border-radius: 50%;
+    z-index: 2;
+    padding: 7px;
+    position: relative;
+    display: block;
+    margin-top: 0;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+.btn-menu span,
+.btn-menu span::after,
+.btn-menu span::before
+ {
+    content: '';
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    display: block;
+    width: 25px;
+    transition: 0.1s;
+    }
+.btn-menu span{
+    top: 50%;
+    margin-left: 2px;
+}
+.btn-menu span::after {  
+    transform: translateY(5px);
+   
+}
+.btn-menu span::before {   
+    transform: translateY(-5px);
+   
+}
+.btn-menu:hover {
+    cursor: pointer;
+}
+
+.btn-menu_active span::before {
+    transform: rotate(45deg);
+    height: 1px;
+}
+
+.btn-menu_active span::after {
+    height: 1px;
+    transform: rotate(-45deg);
+}
+
+.btn-menu_active span {
+    height: 0;
+}
+
+.menu ul li a {
+    transition: 0.3s;
+    font-weight: 600;
+}
+.menu ul {
+    margin: 0;
+    transition: 0.2s;
+    transform: scaleX(0) translateX(0%);
+    transform-origin: right center;
+    opacity: 0;
+    visibility: hidden;
+    height: 44px;
+    padding: 0;
+    margin-top: 0px;
+    line-height: 44px;
+    background-color: #fff;
+    padding-right: 26px;
+    padding-left: 25px;
+    margin-right: -34px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.btn-menu_active ul {
+    transform: scaleX(1) translateX(0%);
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu_active ul {
+    transform: scaleX(1) translateX(0%);
+    opacity: 1;
+    background: #ffffffbf;
+    visibility: visible;
+    z-index: 1;
+}
+.imgslide {
+    display: inline-flex;
+    top: 45%;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+}
+
+.imgslide h1 {
+    font-size: 107px;
+    color: #fff;
+    text-shadow: 4px 3px 3px #7f7f7f;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.imgslide p {
+    font-size: 30px;
+    color: #fff;
+}
+.logo p {
+    position: absolute;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    display: inline;
+    font-size: 29px;
+    margin-left: 9px;
+    top: 1%;
+}
+
+.menu ul li::after {
+    content:"";
+    height: 2px;
+    bottom: 20%;
+    background-color: #0b3323;
+    z-index: 3;
+    position: absolute;
+    display: block;
+    transform: scaleX(1) translateX(0%);
+    transform-origin: left center;
+    width: 0px;
+    transition: 0.5s;
+}
+.menu ul li:hover::after 
+{
+    content:"";
+    height: 2px;
+    bottom: 20%;
+    background-color: #224e31;
+    z-index: 3;
+    position: absolute;
+    display: block;
+    transform: scaleX(1) translateX(0%);
+    transform-origin: left center;
+    width: 40px;
+    transition: 0.5s;
+    }
+ 
+    
+.menu ul li:hover a{
+    font-weight: 600;
+    transition: 0.5s;
+    color: #295d3f;
+    transform-origin: center;
+}
+
+.container {
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+#animtext{
+    display: none;
+}
